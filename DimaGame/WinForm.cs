@@ -2,20 +2,37 @@ using System.Windows.Forms;
 
 namespace DimaGame;
 
+/// <summary>
+/// Создает форму с оповещением о выйгрыше
+/// </summary>
 public partial class WinForm : Form
 {
+    /// <param name="_height"> Высота формы </param>
+    /// <param name="_width"> Ширина формы </param>
+    /// <param name="_sizeLabel"> Размер лейбла </param>
     private readonly int _height = 320;
     private readonly int _width = 320;
     private readonly (int, int) _sizeLabel = (150, 50);
 
+/// <summary>
+/// Конструктор формы WinForm
+/// </summary>
     public WinForm()
     {
         InitializeComponent(_height, _width);
         Init();
     }
 
+    /// <summary>
+    /// Настройка и отображение формы WinForm
+    /// </summary>
     private void Init()
     {
+        /// <param name="label"> Текстовое поле </param>
+        /// <param name="buttonReset"> Кнопка сброса </param>
+        /// <param name="buttonExit"> Кнопка выхода </param>
+        /// <param name="colorWhite"> Белый цвет </param>
+        /// <param name="colorBlack"> Черный цвет </param>
         var label = new Label();
         var buttonReset = new Button();
         var buttonExit = new Button();
@@ -50,11 +67,17 @@ public partial class WinForm : Form
         Controls.Add(buttonExit);
     }
 
+/// <summary>
+/// Функция вызывающаяся при нажатии на кнопку Reset
+/// </summary>
     private void ResetClick(object sender, EventArgs e)
     {
         Close();
     }
 
+/// <summary>
+/// Функция вызывающаяся при нажатии на кнопку Exit
+/// </summary>
     private void ExitClick(object sender, EventArgs e)
     {
         Application.Exit();

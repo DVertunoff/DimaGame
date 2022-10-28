@@ -39,25 +39,28 @@ public partial class GameField : Form
     {
 /// <param name="xposFirstButton"> Позиция самой первой кнопки по оси x, от которой идет отcчет позиции других кнопок </param>
 /// <param name="yposFirstButton"> Позиция самой первой кнопки по оси y, от которой идет отcчет позиции других кнопок </param>
-/// <param name="checkButton"> Ну поле короче собирает </param>
+/// <param name="checkButton"> Кнопка, при нажатии которой собирается поле с победной комбинацией </param>
         var xposFirstButton = _windowWidth / 2 - _buttonSize * _fieldSize / 2;
         var yposFirstButton = _windowHeight / 2 - _buttonSize * _fieldSize / 2;
         var checkButton = new Button();
 
+///<param name="button"> Переменная задающая параметры и визуализацию кнопки </param>
         for (int i = 0; i < _fieldSize; i++)
-        for (int j = 0; j < _fieldSize; j++)
-        {
-            var button = new Button();
-            button.Location = new Point(xposFirstButton + j * _buttonSize, yposFirstButton + i * _buttonSize);
-            button.Height = 50;
-            button.Width = 50;
-            button.Text = _logicGame.GetCellWithNumber(i, j);
-            button.Name = i + " " + j;
-            button.Click += ButtonClick;
-            Controls.Add(button);
-            _masOfButtons[i, j] = button;
-            if (button.Text.Equals(" ")) button.Enabled = false;
-        }
+            for (int j = 0; j < _fieldSize; j++)
+            {
+                var button = new Button();
+                button.Location = new Point(xposFirstButton + j * _buttonSize, yposFirstButton + i * _buttonSize);
+                button.Height = 50;
+                button.Width = 50;
+                button.Text = _logicGame.GetCellWithNumber(i, j);
+                button.Name = i + " " + j;
+                button.Click += ButtonClick;
+
+                Controls.Add(button);
+                _masOfButtons[i, j] = button;
+                if (button.Text.Equals(" "))
+                        button.Enabled = false;
+            }
 
         checkButton.Text = "collect the field";
         checkButton.Click += CheckButton;
@@ -68,6 +71,13 @@ public partial class GameField : Form
         checkButton.Location = new Point(10, 10);
     }
 
+    /// <summary>
+    /// Функция ButtonClick - вызывается при нажатии на кнопку
+    /// </summary>
+    /// <param name="buttonName"> Имя нажимаемой кнопки </param>
+    /// <param name="str"> Одномерный массив, хранящий координаты нажимаемой кнопок </param>
+    /// <param name="coordXOfButton"> Поле координат x нажимаемой кнопки </param>
+    /// <param name="coordYOfButton"> Поле координат y нажимаемой кнопки </param>
     private void ButtonClick(object sender, EventArgs e)
     {
         var buttonName = (sender as Button).Name;
@@ -116,12 +126,18 @@ public partial class GameField : Form
         if (_logicGame.FieldValidation()) WinFinction();
     }
 
+/// <summary>
+/// Функция которая вызывается при клике на кнопку ChekButton
+/// </summary>
     private void CheckButton(object sender, EventArgs e)
     {
         Check();
         Repaint();
     }
 
+/// <summary>
+/// Функция которая отвечает за перерисовку поля
+/// </summary>
     private void Repaint()
     {
         for (int i = 0; i < _masOfButtons.GetLength(0); i++)
@@ -131,6 +147,9 @@ public partial class GameField : Form
         }
     }
 
+/// <summary>
+/// Проверяет поле на победную комбинацию
+/// </summary>
     private void Check()
     {
         for (int i = 0; i < _masOfButtons.GetLength(0); i++)
@@ -140,10 +159,15 @@ public partial class GameField : Form
         }
     }
 
+/// <summary>
+/// Функция которая вызывается при победной комбинации
+/// </summary>
+/// <param name="winForm"> Форма, вызывающаяся при победной комбинации </param> 
+/// <param name="startField"> Форма, вызывающаяся при закрытии окна WinForm </param>
     private void WinFinction()
     {
-        WinForm form = new WinForm();
-        form.ShowDialog();
+        WinForm winForm = new WinForm();
+        winForm.ShowDialog();
         
         Form startField = Application.OpenForms[0];
         startField.Show();

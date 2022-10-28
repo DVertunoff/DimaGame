@@ -1,12 +1,22 @@
 using System.Collections;
 
+/// <summary>
+/// Класс реализующий логику игры
+/// </summary>
 public sealed class LogicGame
 {
+/// <param name="_fieldSize"> Размер поля </param>
+/// <param name="_trueField"> Двумерный массив содержащий поле с выйгрышной комбинацией </param>
+/// <param name="_fieldWithCount"> Двумерный массив содержащий случайно сгенерированное поле </param>
+/// <param name="_mas"> Одномерный массив содержащий цифры случайно сгенерированного поля </param>
     private readonly int _fieldSize = 3;
     private readonly string[,] _trueField;
     private readonly string[,] _fieldWithCount;
     private readonly int[] _mas;
 
+/// <summary>
+/// Конструктор класса LogicGame
+/// </summary>
     public LogicGame(int size)
     {
         _fieldSize = size;
@@ -15,6 +25,9 @@ public sealed class LogicGame
         _mas = new int[_fieldSize * _fieldSize];
     }
 
+/// <summary>
+/// Конструктор класса LogicGame для модульных тестов
+/// </summary>
     public LogicGame(string[,] masTest)
     {
         _trueField = new string[_fieldSize + 2, _fieldSize + 2];
@@ -26,6 +39,9 @@ public sealed class LogicGame
             }
     }
 
+/// <summary>
+/// Конструктор класса LogicGame для модульных тестов
+/// </summary>
     public LogicGame(int[] masTest2)
     {
         _fieldSize = 4;
@@ -36,8 +52,12 @@ public sealed class LogicGame
         }
     }
 
+/// <summary>
+/// Функция отвечающая за инициализацию логики
+/// </summary>
     public void StartLogic()
     {
+///<param name="flag"> Переменная типа bool, индикатор </param>
         var flag = false;
         FillTheTrueField();
 
@@ -51,8 +71,12 @@ public sealed class LogicGame
         } while (!flag);
     }
 
+/// <summary>
+/// Функция отвечающая за заполнение двумерного массива выйгрышной комбинацией
+/// </summary>
     public void FillTheTrueField()
     {
+///<param name="count"> Переменная типа int, счетчик </param>
         var count = 1;
 
         for (int i = 0; i < _trueField.GetLength(0); i++)
@@ -73,8 +97,14 @@ public sealed class LogicGame
         }
     }
 
+/// <summary>
+/// Функция отвечающая за заполнение двумерного массива случайными числами
+/// </summary>
     public void FillTheField()
     {
+///<param name="list"> Переменная типа list, хранит разные числа </param>
+///<param name="count"> Переменная типа int, счетчик </param>
+///<param name="random"> Объект класса Random, который генерирует случайное число </param>
         var list = new List<int>();
         var count = 0;
         var random = new Random();
@@ -91,9 +121,11 @@ public sealed class LogicGame
         {
             for (int j = 1; j < _fieldWithCount.GetLength(0) - 1; j++)
             {
+///<param name="flag"> Переменная типа bool, индикатор </param>
                 var flag = false;
                 do
                 {
+///<param name="rnd"> Переменная которая хранит случайное число </param>
                     var rnd = random.Next(1, (_fieldSize * _fieldSize) + 1);
 
                     if (list.Contains(rnd)) continue;
@@ -114,8 +146,13 @@ public sealed class LogicGame
         }
     }
 
+/// <summary>
+/// Функция проверяющая поле на решаемость
+/// </summary>
+/// <returns> Если поле решаемое - возвращает True, иначе False </returns>
     public Boolean SolvabilityCheck()
     {
+///<param name="inv"> Переменная типа int, счетчик </param>
         var inv = 0;
 
         for (int i = 0; i < _fieldSize * _fieldSize; ++i)
@@ -138,8 +175,13 @@ public sealed class LogicGame
         return true;
     }
 
+/// <summary>
+/// Функция которая сверяет текущую комбинацию с выйгрышной
+/// </summary>
+/// <returns> Если комбинация выйгрышная - возвращает True, иначе False </returns>
     public Boolean FieldValidation()
     {
+///<param name="count"> Переменная типа int, счетчик </param>
         var count = 0;
         for (int i = 1; i < _trueField.GetLength(0) - 1; i++)
             for (int j = 1; j < _trueField.GetLength(0) - 1; j++)
@@ -149,16 +191,33 @@ public sealed class LogicGame
         return count == (_fieldSize * _fieldSize);
     }
 
+/// <summary>
+/// Функция которая возвращает значение выигрышного поля под индексами a, b
+/// </summary>
+/// <param name="a"> Переменная тип int, индекс </param>
+/// <param name="b"> Переменная тип int, индекс </param>
+/// <returns> Возвращает строку со значением поля под индексами a, b </returns>
     public String GetTrueFieldValue(int a, int b)
     {
         return _trueField[a + 1, b + 1];
     }
 
+/// <summary>
+/// Функция которая возвращает значение текущего поля под индексами a, b
+/// </summary>
+/// <param name="a"> Переменная тип int, индекс </param>
+/// <param name="b"> Переменная тип int, индекс </param>
+/// <returns> Возвращает строку со значением поля под индексами a, b </returns>
     public String GetCellWithNumber(int a, int b)
     {
         return _fieldWithCount[a + 1, b + 1];
     }
 
+/// <summary>
+/// Функция которая назначает значение текущего поля под индексами a, b
+/// </summary>
+/// <param name="a"> Переменная тип int, индекс </param>
+/// <param name="b"> Переменная тип int, индекс </param>
     public void SetCellWithNumber(int a, int b, String number)
     {
         _fieldWithCount[a + 1, b + 1] = number;
