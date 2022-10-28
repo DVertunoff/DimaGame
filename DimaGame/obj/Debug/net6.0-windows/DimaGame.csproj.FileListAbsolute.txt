@@ -1,0 +1,34 @@
+E:\java projects\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.exe
+E:\java projects\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.deps.json
+E:\java projects\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.runtimeconfig.json
+E:\java projects\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.dll
+E:\java projects\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.pdb
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.csproj.AssemblyReference.cache
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.GeneratedMSBuildEditorConfig.editorconfig
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.AssemblyInfoInputs.cache
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.AssemblyInfo.cs
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.csproj.CoreCompileInputs.cache
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.dll
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\refint\DimaGame.dll
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.pdb
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.genruntimeconfig.cache
+E:\java projects\DimaGame\DimaGame\obj\Debug\net6.0-windows\ref\DimaGame.dll
+C:\Users\Admin\Desktop\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.exe
+C:\Users\Admin\Desktop\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.deps.json
+C:\Users\Admin\Desktop\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.runtimeconfig.json
+C:\Users\Admin\Desktop\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.dll
+C:\Users\Admin\Desktop\DimaGame\DimaGame\bin\Debug\net6.0-windows\DimaGame.pdb
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.AssemblyInfo.cs
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.dll
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\refint\DimaGame.dll
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.pdb
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.genruntimeconfig.cache
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\ref\DimaGame.dll
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.WinForm.resources
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.StartForm.resources
+C:\Users\Admin\Desktop\DimaGame\DimaGame\obj\Debug\net6.0-windows\DimaGame.GameField.resources
