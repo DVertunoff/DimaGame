@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C4XN0ikvUP0JH88poOhV4AWl/f/bLvKgEK+RFc+dtSplGy16FpojcgmKbVnBxZBDqwf1wjDZ9ehAQPyJd3cBUw==",
+  "dgSpecHash": "0DB/1GNR9bHupgGc1yMRPF27hVWomc29aQMivWR/UqKgyrMF7W9Ud58nYo96xobT1QMJl6BKl2z1CaENXOLdzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\DimaGame\\[DimaGame].Tests\\[DimaGame].Tests.csproj",
+  "projectFilePath": "D:\\c#proj\\DimaGame\\[DimaGame].Tests\\[DimaGame].Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
